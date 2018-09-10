@@ -215,8 +215,9 @@ namespace MAC_2.Employee
 
                         foreach (var strVolume in strVolumes)
                         {
-                            double newVolume;
-                            if (double.TryParse(strVolume, out newVolume))
+                            double newVolume = default(double);
+
+                            if (double.TryParse(strVolume, out newVolume) || String.IsNullOrEmpty(strVolume))
                             { newVolumesList.Add(newVolume); }
                             else
                             {
@@ -248,7 +249,7 @@ namespace MAC_2.Employee
                     var oldVolumes = SelectionWell.Sample.Volumes.ToArray();
                     var periods = new[] { Helpers.PeriodHelper.CurrentPeriod, Helpers.PeriodHelper.NextPeriod };
 
-                    for (int i = 0; i < 2; i++)
+                    for (int i = 0; i < newVolumes.Length; i++)
                     {
                         if (oldVolumes.Length < i + 1 && newVolumes[i] > i)
                         { AddVolume(periods[i], newVolumes[i]); }
