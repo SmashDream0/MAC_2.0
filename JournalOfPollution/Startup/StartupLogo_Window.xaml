@@ -1,0 +1,32 @@
+﻿<Window x:Class="MAC_2.StartupLogo_Window"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Name="LogotipStart"
+        Height="325"
+        Width="300"
+        MinHeight="200"
+        MinWidth="200"
+        MaxHeight="325"
+        MaxWidth="300"
+        WindowStyle="None">
+    <Grid>
+    <Grid.RowDefinitions>
+        <RowDefinition></RowDefinition>
+        <RowDefinition Height="30"></RowDefinition>        
+    </Grid.RowDefinitions>
+    <Image 
+        Grid.Row="0" 
+        Source="/MAC 2;component/Resources/logotip_mini.jpg"></Image>
+    <TextBlock 
+        x:Name="LableL" 
+        Grid.Row="1" 
+        Text="Загрузка ..."
+        HorizontalAlignment="Center" FontSize="16">
+        <TextBlock.Foreground>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="White" Offset="0"/>
+                <GradientStop Color="#FF0C0440" Offset="0.82"/>
+            </LinearGradientBrush>
+        </TextBlock.Foreground></TextBlock>
+    </Grid>
+</Window>

@@ -1,0 +1,39 @@
+﻿<Window x:Class="MAC_2.PrintForm.Control_Print"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Name="ControlPrint"
+        Title="За секунду до печати"
+        Height="300"
+        Width="300"
+        Loaded="ControlPrint_Loaded">
+    <Window.Resources>
+        <Style TargetType="RowDefinition">
+            <Setter Property="Height" Value="Auto"></Setter>
+        </Style>
+        <Style TargetType="ColumnDefinition">
+            <Setter Property="Width" Value="Auto"></Setter>
+        </Style>
+    </Window.Resources>
+    <Grid 
+        Name="Store">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid 
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Name="Elems">
+        </Grid>
+        <Button 
+            Click="Close_Click"
+            Margin="2"
+            Content="Подтвердить и закрыть"
+            Name="Close"
+            Grid.Row="1">
+        </Button>
+    </Grid>
+</Window>

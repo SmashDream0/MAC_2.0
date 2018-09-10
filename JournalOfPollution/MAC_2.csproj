@@ -1,0 +1,502 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8FC99386-71C0-4D90-AC92-B1AAA92A4A3E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>MAC_2</RootNamespace>
+    <AssemblyName>MAC 2</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>MAC.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>82901635A07D757CDCB19569AAA9C667007DC6B1</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>JournalOfPollution_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpZipLib.0.86.0\lib\20\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="ImapX">
+      <HintPath>..\..\ImapX\ImapX\bin\Debug\ImapX.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI, Version=2.3.0.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.3.0\lib\net40\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OOXML, Version=2.3.0.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.3.0\lib\net40\NPOI.OOXML.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net, Version=2.3.0.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.3.0\lib\net40\NPOI.OpenXml4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats, Version=2.3.0.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.3.0\lib\net40\NPOI.OpenXmlFormats.dll</HintPath>
+    </Reference>
+    <Reference Include="SevenZipSharp">
+      <HintPath>..\..\AT\New AT\AutoTable\AutoTable\bin\Debug\SevenZipSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="Xceed.Wpf.Toolkit">
+      <HintPath>..\..\Дополнительные библиотеки\Xceed.Wpf.Toolkit.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Calc\BaseCalc_Class.cs" />
+    <Compile Include="Calc\Calc_621.cs" />
+    <Compile Include="Calc\Calc_644.cs" />
+    <Compile Include="Calc\Calc_Window.xaml.cs">
+      <DependentUpon>Calc_Window.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Calc\ConstFromCalc_Class.cs" />
+    <Compile Include="Calc\C_KeyPol_Summ.cs" />
+    <Compile Include="Calc\Generator\FormulaCreator_Window.xaml.cs">
+      <DependentUpon>FormulaCreator_Window.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Calc\Generator\GeneratorCalc_Class.cs" />
+    <Compile Include="Calc\Generator\GeneratorCalc_Window.xaml.cs">
+      <DependentUpon>GeneratorCalc_Window.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Choose_Page.xaml.cs">
+      <DependentUpon>Choose_Page.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\EditSample\EditValue_Window.xaml.cs">
+      <DependentUpon>EditValue_Window.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\EditSample\Values\BaseValue.cs" />
+    <Compile Include="Employee\EditSample\Values\DeclarationValueInternal.cs" />
+    <Compile Include="Employee\EditSample\Values\SelectionValueInternal.cs" />
+    <Compile Include="Employee\EditSample\Values\ValueCalc.cs" />
+    <Compile Include="Employee\EditSample\Values\ValuePair.cs" />
+    <Compile Include="Employee\HelpSelect\SampleAdd\SelectionWellViewModel.cs" />
+    <Compile Include="Employee\HelpSelect\Selector\NegotiationAssistantSearch.cs" />
+    <Compile Include="Employee\Mechanisms\Load\Volume\Columns.cs" />
+    <Compile Include="Helpers\AdresHelper.cs" />
+    <Compile Include="Employee\Mechanisms\Load\Volume\Item.cs" />
+    <Compile Include="Employee\View_Class.cs" />
+    <Compile Include="Employee\HelpSelect\SampleAdd\SampleAdd_Window.xaml.cs">
+      <DependentUpon>SampleAdd_Window.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\HelpSelect\Selector\Selector_Class.cs" />
+    <Compile Include="Employee\HelpSelect\Selector_Window.xaml.cs">
+      <DependentUpon>Selector_Window.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\Mechanisms\Dates\ControlHit_Class.cs" />
+    <Compile Include="Employee\Windows\Norm\Item.cs" />
+    <Compile Include="Employee\Windows\Norm\NormBaseValue.cs" />
+    <Compile Include="Employee\Windows\Norm\NormPriceValue.cs" />
+    <Compile Include="Employee\Windows\Norm\NormUnitValue.cs" />
+    <Compile Include="Employee\Windows\Norm\Resolution_NormValues.cs" />
+    <Compile Include="Helpers\CalcHelper.cs" />
+    <Compile Include="Helpers\PeriodHelper.cs" />
+    <Compile Include="Helpers\PrintHelper.cs" />
+    <Compile Include="Logic\AccreditLogic.cs" />
+    <Compile Include="Logic\AccurateMeasurementLogic.cs" />
+    <Compile Include="Logic\AdresLogic.cs" />
+    <Compile Include="Logic\Base\BaseLogic.cs" />
+    <Compile Include="Logic\Base\BaseLogicTyped.cs" />
+    <Compile Include="Logic\Base\querior\baseQuery.cs" />
+    <Compile Include="Logic\Base\querior\queryTable.cs" />
+    <Compile Include="Logic\Base\querior\queryTableColumn.cs" />
+    <Compile Include="Logic\Base\querior\queryValue\baseValue.cs" />
+    <Compile Include="Logic\Base\querior\queryValue\TypedValue.cs" />
+    <Compile Include="Logic\CalculationFormulaLogic.cs" />
+    <Compile Include="Logic\ClientsLogic.cs" />
+    <Compile Include="Logic\CoefficientLogic.cs" />
+    <Compile Include="Logic\CoefficientValueLogic.cs" />
+    <Compile Include="Logic\DeclarationLogic.cs" />
+    <Compile Include="Logic\DeclarationValueLogic.cs" />
+    <Compile Include="Logic\DetailsClientLogic.cs" />
+    <Compile Include="Helpers\LogicHelper.cs" />
+    <Compile Include="Logic\DetailsObjectLogic.cs" />
+    <Compile Include="Logic\NegotiationAssistantLogic.cs" />
+    <Compile Include="Logic\NormDocLogic.cs" />
+    <Compile Include="Logic\ObjectFromResolutionLogic.cs" />
+    <Compile Include="Logic\ObjectLogic.cs" />
+    <Compile Include="Logic\PeiodLogic.cs" />
+    <Compile Include="Logic\PollutionLogic.cs" />
+    <Compile Include="Logic\PriceNormLogic.cs" />
+    <Compile Include="Logic\RatioSignerLogic.cs" />
+    <Compile Include="Logic\ResolutionClarifyLogic.cs" />
+    <Compile Include="Logic\ResolutionLogic.cs" />
+    <Compile Include="Logic\SelectionWellLogic.cs" />
+    <Compile Include="Logic\UnitLogic.cs" />
+    <Compile Include="Logic\UnitsLogic.cs" />
+    <Compile Include="Logic\ValueNormLogic.cs" />
+    <Compile Include="Logic\VolumeLogic.cs" />
+    <Compile Include="Logic\WorkerLogic.cs" />
+    <Compile Include="Misc\Messages\Error.cs" />
+    <Compile Include="Misc\Messages\Information.cs" />
+    <Compile Include="Misc\Messages\Main.cs" />
+    <Compile Include="Misc\Messages\Question.cs" />
+    <Compile Include="Model\Accred.cs" />
+    <Compile Include="Model\AccurateMeasurement.cs" />
+    <Compile Include="Model\Adres.cs" />
+    <Compile Include="Model\CalculationFormula.cs" />
+    <Compile Include="Model\Client.cs" />
+    <Compile Include="Model\Coefficient.cs" />
+    <Compile Include="Model\CoefficientValue.cs" />
+    <Compile Include="Model\Declaration.cs" />
+    <Compile Include="Model\DeclarationValue.cs" />
+    <Compile Include="Model\DetailsClient.cs" />
+    <Compile Include="Model\DetailsObject.cs" />
+    <Compile Include="Model\MidMonthVolume.cs" />
+    <Compile Include="Model\NavigationProperty\BaseNavigationProperty.cs" />
+    <Compile Include="Model\NavigationProperty\ListNavigationProperty.cs" />
+    <Compile Include="Model\NavigationProperty\ListNavigationPropertyTyped.cs" />
+    <Compile Include="Model\NavigationProperty\NavigationPropertryTyped.cs" />
+    <Compile Include="Model\NavigationProperty\NavigationProperty.cs" />
+    <Compile Include="Model\NegotiationAssistant.cs" />
+    <Compile Include="Model\NormDoc.cs" />
+    <Compile Include="Model\Objecte.cs" />
+    <Compile Include="Model\ObjectFromResolution.cs" />
+    <Compile Include="Model\Period.cs" />
+    <Compile Include="Model\Populition.cs" />
+    <Compile Include="Model\Price.cs" />
+    <Compile Include="Model\PriceNorm.cs" />
+    <Compile Include="Model\RadioSigner.cs" />
+    <Compile Include="Model\Representive.cs" />
+    <Compile Include="Model\Resolution.cs" />
+    <Compile Include="Model\ResolutionClarity.cs" />
+    <Compile Include="Model\Sample.cs" />
+    <Compile Include="Model\SelectionWell.cs" />
+    <Compile Include="Model\TypeClient.cs" />
+    <Compile Include="Model\TypeWell.cs" />
+    <Compile Include="Model\Unit.cs" />
+    <Compile Include="Model\Units.cs" />
+    <Compile Include="Model\Value.cs" />
+    <Compile Include="Model\ValueNorm.cs" />
+    <Compile Include="Model\ValueSelection.cs" />
+    <Compile Include="Model\Volume.cs" />
+    <Compile Include="Logic\SampleLogic.cs" />
+    <Compile Include="Logic\ValuesSelectionLogic.cs" />
+    <Compile Include="Logic\WellLogic.cs" />
+    <Compile Include="Employee\Mechanisms\Load\LoadActs.cs" />
+    <Compile Include="Employee\Mechanisms\Load\LoadFromCalc.cs" />
+    <Compile Include="Employee\Mechanisms\Load\Volume\LoadVolumes.cs" />
+    <Compile Include="Employee\Mechanisms\Dates\AdditionnTable_Class.cs" />
+    <Compile Include="Employee\Mechanisms\Dates\BaseStart.cs" />
+    <Compile Include="Employee\Mechanisms\Dates\ObjectBase_Class.cs" />
+    <Compile Include="Employee\Mechanisms\Dates\DateControl_Class.cs" />
+    <Compile Include="Employee\Mechanisms\Dates\PolutionBase_Class.cs" />
+    <Compile Include="Employee\Mechanisms\PrintForm\Extract_Print_Class.cs" />
+    <Compile Include="Employee\Mechanisms\PrintForm\InspectionResult_Print_Class.cs" />
+    <Compile Include="Employee\Mechanisms\PrintForm\Journal_Print_Class.cs" />
+    <Compile Include="Employee\Mechanisms\PrintForm\Protocol_Print_Class.cs" />
+    <Compile Include="Employee\Mechanisms\PrintForm\Registry_Print_Class.cs" />
+    <Compile Include="Employee\Mechanisms\PrintForm\Styles.cs" />
+    <Compile Include="Employee\Mechanisms\PrintForm\TableSelection.cs" />
+    <Compile Include="Employee\Windows\Norm\Norm_Class.cs" />
+    <Compile Include="Employee\ThisTools\InstructionsMessage_Class.cs" />
+    <Compile Include="Employee\Windows\Client\Client_Class.cs" />
+    <Compile Include="Employee\Windows\Client\Client_Window.xaml.cs">
+      <DependentUpon>Client_Window.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\Windows\Norm\Norm_Window.xaml.cs">
+      <DependentUpon>Norm_Window.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Well.cs" />
+    <Compile Include="Model\Worker.cs" />
+    <Compile Include="PortingBase\Porting_Class.cs" />
+    <Compile Include="PortingBase\Porting_Window.xaml.cs">
+      <DependentUpon>Porting_Window.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\Mechanisms\PrintForm\ActSelect_Print_Class.cs" />
+    <Compile Include="Employee\Mechanisms\PrintForm\Base_Print_Class.cs" />
+    <Compile Include="Employee\Mechanisms\PrintForm\CalculationFees_Print_Class.cs" />
+    <Compile Include="Employee\Mechanisms\PrintForm\Control_Print.xaml.cs">
+      <DependentUpon>Control_Print.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\Mechanisms\PrintForm\Letter_Print_Class.cs" />
+    <Compile Include="Employee\Mechanisms\PrintForm\Template_Class.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Repository\BaseRepository.cs" />
+    <Compile Include="Repository\BaseRepositoryTyped.cs" />
+    <Compile Include="Repository\PollutionRepository.cs" />
+    <Compile Include="Startup\Mail_Window.xaml.cs">
+      <DependentUpon>Mail_Window.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Startup\SetNewPassWord_Window.xaml.cs">
+      <DependentUpon>SetNewPassWord_Window.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Startup\StartupLogo_Window.xaml.cs">
+      <DependentUpon>StartupLogo_Window.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Startup\Startup_Window.xaml.cs">
+      <DependentUpon>Startup_Window.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Startup\TimeLessPass_Window.xaml.cs">
+      <DependentUpon>TimeLessPass_Window.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="StaticElements\StaticDate.cs" />
+    <Page Include="Calc\Calc_Window.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Calc\Generator\FormulaCreator_Window.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Calc\Generator\GeneratorCalc_Window.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Choose_Page.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Employee\Admin\About_Window.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Employee\Admin\AdminPanel.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Employee\Admin\Settings_Window.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Employee\EditSample\EditValue_Window.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Employee\Employee_Default.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="AddIn.cs" />
+    <Compile Include="Employee\Admin\About_Window.xaml.cs">
+      <DependentUpon>About_Window.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\Admin\AdminPanel.xaml.cs">
+      <DependentUpon>AdminPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\Admin\Settings_Window.xaml.cs">
+      <DependentUpon>Settings_Window.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\Admin\UsersBlock_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee\Admin\UsersBlock_Form.designer.cs">
+      <DependentUpon>UsersBlock_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\Employee_Default.xaml.cs">
+      <DependentUpon>Employee_Default.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Employee\HelpSelect\SampleAdd\SampleAdd_Window.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Employee\HelpSelect\Selector_Window.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Employee\Windows\Client\Client_Window.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Employee\Windows\Norm\Norm_Window.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PortingBase\Porting_Window.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Employee\Mechanisms\PrintForm\Control_Print.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Startup\Mail_Window.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Startup\SetNewPassWord_Window.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Startup\StartupLogo_Window.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Startup\Startup_Window.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Startup\TimeLessPass_Window.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Misc\Load\Base.cs" />
+    <Compile Include="Misc\Load\Main.cs" />
+    <Compile Include="Misc\Load\Settings.cs" />
+    <Compile Include="Misc\Misc.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Employee\Admin\UsersBlock_Form.resx">
+      <DependentUpon>UsersBlock_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Add.png" />
+    <Resource Include="Resources\Address.png" />
+    <Resource Include="Resources\ArrowsTB.png" />
+    <Resource Include="Resources\Check.png" />
+    <Resource Include="Resources\Contract.png" />
+    <Resource Include="Resources\Delete.png" />
+    <Resource Include="Resources\Documents.png" />
+    <Resource Include="Resources\Edit.png" />
+    <Resource Include="Resources\Error.png" />
+    <Resource Include="Resources\Exit.png" />
+    <Resource Include="Resources\ExitMan.png" />
+    <Resource Include="Resources\InExcel.png" />
+    <Resource Include="Resources\Instructions1.png" />
+    <Resource Include="Resources\Instructions2.png" />
+    <Resource Include="Resources\Letter.png" />
+    <Resource Include="Resources\logotip_mini.jpg" />
+    <Resource Include="Resources\OutExcel.png" />
+    <Resource Include="Resources\Pay.png" />
+    <Resource Include="Resources\Print.png" />
+    <Resource Include="Resources\Reference.png" />
+    <Resource Include="Resources\Report.png" />
+    <Resource Include="Resources\Save.png" />
+    <Resource Include="Resources\Search.png" />
+    <Resource Include="Resources\Setings.png" />
+    <Resource Include="Resources\Subscriber.png" />
+    <Resource Include="Resources\Update.png" />
+    <Resource Include="Resources\Water.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Bulb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Chart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MAC.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Watch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Tools\Formulator\Formulator\Formulator.csproj">
+      <Project>{ba611fa9-7375-4e49-8335-4835b38092fd}</Project>
+      <Name>Formulator</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Tools\Logger\Logger.csproj">
+      <Project>{95f074f1-5229-4cac-b11e-00a39bdfcfce}</Project>
+      <Name>Logger</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\AT\New AT Nf 4.0\AutoTable\AutoTable\AutoTable.csproj">
+      <Project>{0f89a397-4a7f-492f-9d2b-d614f4549dba}</Project>
+      <Name>AutoTable</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
